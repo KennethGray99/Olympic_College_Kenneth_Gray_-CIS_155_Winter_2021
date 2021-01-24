@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Author: Kenneth Gray
+Date: 01/22/21
+Subject: CIS155 Project v1
+-->
+<head>
+<!--
+M1LO6 Demonstrate the use of basic HTML tags to create a simple Web page (HTML, this item should be specified once, describing how the file it is in meets this outcome)
+
+The page I've constructed consists of the basic HTML code needed to create a web page, such as the <html>, <head>, <body>, <article>.
+-->
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Dog, shiba, shiba inu, health" />
+    <!--
+    M1LO8 Demonstrate the use of external style sheets (HTML, note the external style sheet must exist and contain CSS)
+
+    A CSS external style sheet to help decorate my site.
+    -->
+    <link href="styles.css" rel="stylesheet" />
+    <title>Home Page</title>
+    <!--
+    M2LO4 Demonstrate external, embedded, and inline styles (HTML, this item should be specified 2 times,
+    once each for embedded and inline styles; note external was taken care of with M1LO8;
+    see 2-3b Embedded Style Sheets, and 2-3c Inline Styles)
+        
+    Embedded Style changing the font of the lists font.
+    -->
+    <style>
+        article > nav > ul > li{
+            font-family: Cambria;
+        }
+    </style>
+</head> 
+
+<body>
+<header>
+    <!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external
+    (HTML, this item should be specified 3 times, once on each type of link)
+    
+    An image link that will direct you back to the home page.
+    -->
+    <a href="index.html#home"><img src="groupOfShibas.jpg" alt="" /></a>
+    
+    <nav>
+        <ul>
+            <!--
+            M1LO12 Create navigation using unordered lists (HTML)
+            
+            An unordered lists to let users navigate through my site.
+
+            M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external
+            (HTML, this item should be specified 3 times, once on each type of link)
+
+            Site navigation links, the home page, history page, health page, and about page.
+            -->
+            
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">History</a></li>
+            <li><a href="index.html">Health</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h1 class="headerColor">Welcome to the Shiba Inu Home Page!</h1>
+
+    <p>This is my home page for the Shiba Inu website.<br/><br/>
+        
+        The website will have links to the history and 
+        health info of the Shiba Inu along with an 
+        <a href="about.html#about">about</a> page containing information about any changes 
+        to the site.</p><br/>
+
+
+<article id="colorCoats">
+    <h2>Shiba Inu Coat Colors</h2>
+    <p>There are four different coat colors for the Shiba Inu:</p>
+    <nav>
+        <ul>
+            <li>Red Coat</li>
+            <li>Black and Tan Coat</li>
+            <li>Seasame Coat</li>
+            <li>Cream Coat</li>
+        </ul>
+    </nav>
+    <!--M2LO4 Demonstrate external, embedded, and inline styles (HTML, this item should be specified 2 times,
+         once each for embedded and inline styles; note external was taken care of with M1LO8;
+          see 2-3b Embedded Style Sheets, and 2-3c Inline Styles)
+        
+          Inline Style moving the 4 photos of the shibas up so it doesn't touch the bottom of the page.
+        -->
+    <img style="margin-bottom: 10px;" src="redCoatShiba.png" alt="Red coat Shiba Inu" />
+    <img style="margin-bottom: 10px;" src="blackAndTanCoatShiba.png" alt="Black and Tan coat Shiba Inu" />
+    <img style="margin-bottom: 10px;" src="sesameCoatShiba.jpg" alt="Seasame coat Shiba Inu" />
+    <img style="margin-bottom: 10px;" src="creamCoatShiba.jpg" alt="Cream coat Shiba Inu" />
+</article>
+<footer>
+    <address>
+        <!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external
+    (HTML, this item should be specified 3 times, once on each type of link)
+
+        Provided an email as an external hyperlink.
+        -->
+       Email: <a href="fakeEmail@gmail.com"> fakeEmail@gmail.com</a>
+    </address>
+    Kenneth Gray - CIS 155 - Winter 2021
+</footer>
+</body>
+</html>

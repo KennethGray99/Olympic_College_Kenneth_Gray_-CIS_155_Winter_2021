@@ -1,0 +1,179 @@
+@charset "utf-8";
+/*
+Author: Kenneth Gray
+Date: 01/22/21
+Subject: CIS155 Project v1
+*/
+/* HTML and Body Styles */
+
+/*
+M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS)
+  
+I made adjustments to the sites background color through the use of CSS
+
+M2LO14 Demonstrate and explain the use of progressive enhancement in CSS 
+(CSS, see 2-6 Employing Progressive Enhancement)
+
+The use of progressive enhancement with my html tag is to help dated browsers with the color changes
+  */
+html{
+    background-color: hsla(27, 46%, 51%, 0.61);
+    background-color: rgba(190, 113, 41, 0.61);
+}
+
+body{
+    color: rgb(0, 0, 0);
+    background-color: hsla(0, 0%, 100%, 0.61);
+    font-family: 'Times New Roman';
+    margin-right: 10px;
+    text-align: center;
+}
+
+/* 
+M2LO3 Demonstrate style precedence and inheritance in CSS (CSS, this item should be specified 2 times, 
+once where precedence is applied and once where inheritance is applied; 
+see 2-3d Style Specificity and Precedence, and 2-3e Style Inheritance) 
+  
+Precedence for the paragraphs takes over the body's text color to match the color scheme of the site.
+*/
+p{
+  font-size: 1.25em;
+  color:rgb(83, 64, 36)
+}
+
+/* Heading Styles */
+header{
+    background-color: rgba(212, 178, 105, 0.747);
+    font-family: 'Times New Roman';
+    text-align: center;
+    padding-top: 20px;
+}
+
+h1, h2{
+  font-family: sans-serif;
+  text-align: center;
+}
+
+nav > h2{
+  font-size: 2.5em;
+}
+/*
+M2LO12 Demonstrate how CSS can change presentation of page elements
+(CSS, these are styles that impact page elements rather than impacting text on the page)
+
+The change in this was removing the bullets under the navigation portion (Home, History, Health, About).
+*/
+header > nav > ul > li{
+  font-size: 1.8em;
+  list-style: none;
+}
+
+/* Article Styles */
+
+/*
+M2LO13 Demonstrate how CSS can change presentation of textual elements (CSS, these are styles that impact text that is rendered on the page)
+
+The changelog font size was increased to 2em
+*/
+article > nav > h1{
+  font-size: 2.5em;
+}
+
+/* 
+M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times,
+show a use of id and a use of class, see 2-9b Attribute selectors)
+ 
+Use of class selector to change color of h1 header.
+ */
+h1.headerColor{
+  color: rgb(151, 91, 0);
+}
+
+/* 
+M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual
+selectors as shown in Figure 2-12, Contextual Selectors, of the textbook) 
+ 
+Matching the paragraph element that is a child of the article.
+
+M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector (CSS, specify 2 times,
+show one pseudo-class and one pseudo-element, see 2-18 Using Pseudo-Classes and Pseudo-Elements)
+
+Used a pseudo-element to enlarge the first line of the paragraph in the article.
+*/
+article > p::first-line{
+  font-size: 1.15em;
+}
+
+article > nav > ul > li{
+  margin-right: 20px;
+}
+
+/* Styles */	
+nav > ul > li{
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  padding-right: 30px;
+}
+
+/*
+M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector (CSS, specify 2 times,
+show one pseudo-class and one pseudo-element, see 2-18 Using Pseudo-Classes and Pseudo-Elements)
+
+Used a pseudo-class to color code the Shiba Inu coat colors.
+*/
+article#colorCoats ul li:first-of-type{
+  color: red;
+}
+article#colorCoats ul li:nth-of-type(2){
+  color: black;
+}
+article#colorCoats ul li:nth-of-type(3){
+  color: saddlebrown;
+}
+article#colorCoats ul li:last-of-type{
+  color: rgb(121, 121, 121);
+}
+
+/* 
+M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual
+selectors as shown in Figure 2-12, Contextual Selectors, of the textbook) 
+ 
+All the elements within navigation are to be centered and font-size 1.1em.
+ */
+nav > * { 
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* 
+M2LO3 Demonstrate style precedence and inheritance in CSS (CSS, this item should be specified 2 times,
+once where precedence is applied and once where inheritance is applied;
+see 2-3d Style Specificity and Precedence, and 2-3e Style Inheritance)
+   
+The color change is inherited and will only apply to h1 within navigation.
+*/
+nav > h1{
+  color:rgb(61, 37, 1);
+}
+
+/*
+M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times,
+show a use of id and a use of class, see 2-9b Attribute selectors)
+
+Use the id selector to change the color of the links in navigation.
+*/
+
+#paragraphColor{
+  color: rgb(0, 0, 0);  
+}
+
+/*
+M2LO7 Demonstrate a CSS attribute selector other than class or id 
+(CSS, specify 1 time, see 2-9b Attribute selectors)
+
+The targeted hyperlinks have a dimmer background color for visiblity.
+*/
+
+a[target]{
+  background-color: rgba(182, 180, 180, 0.685);
+}
