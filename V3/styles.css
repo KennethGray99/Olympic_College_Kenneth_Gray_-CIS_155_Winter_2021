@@ -1,0 +1,382 @@
+@charset "utf-8";
+/*
+Author: Kenneth Gray
+Date: 02/17/21
+Subject: CIS155 Project v3
+*/
+/* HTML and Body Styles */
+
+/*
+M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS)
+  
+I made adjustments to the sites background color through the use of CSS
+
+M2LO14 Demonstrate and explain the use of progressive enhancement in CSS 
+(CSS, see 2-6 Employing Progressive Enhancement)
+
+The use of progressive enhancement with my html tag is to help dated browsers with the color changes
+  */
+html{
+  background-color: hsla(27, 46%, 51%, 0.61);
+  background-color: rgba(190, 113, 41, 0.61);
+}
+/*
+M4LO2 Demonstrate the use of background images
+
+Added a paw print background image to the body on the bottom right that doesn't repeat.
+*/
+body{
+    background: url(pawPrint.png) no-repeat bottom right;
+    color: rgb(0, 0, 0);
+    background-color: hsla(0, 0%, 100%, 0.507);
+    font-family: 'Times New Roman';
+    margin: auto;
+    text-align: center;
+    min-width: 750px; 
+    max-width: 960px;
+    width: 75%;
+    
+}
+
+/* 
+M2LO3 Demonstrate style precedence and inheritance in CSS (CSS, this item should be specified 2 times, 
+once where precedence is applied and once where inheritance is applied; 
+see 2-3d Style Specificity and Precedence, and 2-3e Style Inheritance) 
+  
+Precedence for the paragraphs takes over the body's text color to match the color scheme of the site.
+*/
+p{
+  font-size: 1.25em;
+  color:rgb(83, 64, 36)
+}
+
+/* Heading Styles */
+
+/*
+M4LO4 Demonstrate the use of gradient
+
+Added a gradient background to the header for style.
+*/
+header{
+    background: linear-gradient( rgba(201, 170, 102, 0.2), rgba(221, 190, 122, 1));
+    font-family: 'Times New Roman';
+    text-align: center;
+    padding-top: 20px;
+}
+/* 
+M3LO8B Demonstrate relative positioning
+
+I used relative positioning and moved the group of shibas photo up by 20px to have the photo touch the top of the page with no gap.
+*/
+body > header{
+  position: relative;
+  top: -20px;
+}
+body > header > img{
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+h1, h2{
+  font-family: sans-serif;
+  text-align: center;
+}
+
+nav > h2{
+  font-size: 2.5em;
+}
+/*
+M2LO12 Demonstrate how CSS can change presentation of page elements
+(CSS, these are styles that impact page elements rather than impacting text on the page)
+
+The change in this was removing the bullets under the navigation portion (Home, History, Health, About).
+*/
+header > nav > ul > li{
+  font-size: 1.8em;
+  list-style: none;
+}
+
+nav > ul > li{
+  list-style: none;
+}
+
+/* Article Styles */
+
+/*
+M2LO13 Demonstrate how CSS can change presentation of textual elements (CSS, these are styles that impact text that is rendered on the page)
+
+The changelog font size was increased to 2em
+*/
+article > nav > h1{
+  font-size: 2.5em;
+}
+
+/* 
+M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times,
+show a use of id and a use of class, see 2-9b Attribute selectors)
+ 
+Use of class selector to change color of h1 header.
+
+M4LO5 Demonstrate the use of text or box shadowing
+
+Added text shadowing to the h1 to add depth when users see the top heading.
+ */
+h1.headerColor{
+  color: rgb(151, 91, 0);
+  text-shadow: rgb(139, 81, 0) 2px 1px 1px;
+}
+
+/* 
+M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual
+selectors as shown in Figure 2-12, Contextual Selectors, of the textbook) 
+ 
+Matching the paragraph element that is a child of the article.
+
+M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector (CSS, specify 2 times,
+show one pseudo-class and one pseudo-element, see 2-18 Using Pseudo-Classes and Pseudo-Elements)
+
+Used a pseudo-element to enlarge the first line of the paragraph in the article.
+*/
+article > p::first-line{
+  font-size: 1.15em;
+}
+
+article > nav > ul > li{
+  margin-right: 20px;
+}
+
+/* Styles */	
+.navLinks{
+  position: relative;
+  top: 10px;
+  padding-left: 5px;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+nav > ul > li{
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  padding-right: 30px;
+  
+}
+
+/*
+M3LO2 Demonstrate floating elements
+
+Float element on navigation links to make them horizontal instead of vertical stacking on top of each other.
+*/
+header > nav > ul > li.navLinks{
+  float: left;
+  margin-left: 40px;
+  width: 15%;
+}
+
+/* 
+M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual
+selectors as shown in Figure 2-12, Contextual Selectors, of the textbook) 
+ 
+All the elements within navigation are to be centered and font-size 1.1em.
+ */
+nav > * { 
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* 
+M2LO3 Demonstrate style precedence and inheritance in CSS (CSS, this item should be specified 2 times,
+once where precedence is applied and once where inheritance is applied;
+see 2-3d Style Specificity and Precedence, and 2-3e Style Inheritance)
+   
+The color change is inherited and will only apply to h1 within navigation.
+*/
+nav > h1{
+  color:rgb(61, 37, 1);
+}
+
+/*
+M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times,
+show a use of id and a use of class, see 2-9b Attribute selectors)
+
+Use the id selector to change the color of the links in navigation.
+*/
+
+#paragraphColor{
+  color: rgb(0, 0, 0);  
+}
+/*
+M3LO10 Demonstrate an overflow setting
+
+Added an auto overflow if the even of too much text filling up the screen, then it will transition into scrollbars.
+*/
+.text{
+  overflow: auto;
+  position: relative;
+  height: 150px;
+  width: 100%;
+}
+
+.projectList{
+  list-style-type:none;
+  padding-right: 30px;
+  font-size: 1.24em;
+  color: rgb(99, 68, 155);
+}
+/*
+M2LO7 Demonstrate a CSS attribute selector other than class or id 
+(CSS, specify 1 time, see 2-9b Attribute selectors)
+
+The targeted hyperlinks have a dimmer background color for visiblity.
+*/
+
+a[target]{
+  background-color: rgba(182, 180, 180, 0.685);
+}
+
+/*
+M3LO3 Demonstrate a clearing floats
+
+Clears any floatedcolumns with each new row.
+
+M3LO6 Demonstrate formatting a grid
+
+Implemented a grid to showcase the four different coat colors of the Shiba Inu.
+*/
+div.row{
+	clear: both;
+}
+
+div{
+  position: relative;
+}
+
+div.row::after{
+  clear: both;
+  content: "";
+  display: table;
+}
+
+div[class^="col-"]{
+	float: left;
+}
+
+
+div.col-2-2{
+  width: 60%;
+  float:right;
+}
+/*
+M3LO8A Demonstrate absolute positioning
+
+Using absolute positioning to adjust the Shiba photo to the left side of the history page.
+*/
+.doge{
+  position: absolute;
+  width: 50%;
+  top: 65px;
+  left: -300px;
+}
+/*
+M4LO3 Demonstrate the use of rounded corners for borders 
+
+Rounded off the corners of the photos of the different Shiba Coat colors.
+
+M4LO8 Demonstrate the use of transformations for 2D or 3D images
+
+I translated the 4 Shiba Coat colors down 30px to move it closer to remove the gap between the description of each coat color.
+*/
+.coatPhoto{
+  border-radius: 25px;
+  transform: translateY(30px)
+}
+/*
+M3LO9 Demonstrate fixed, static, or inherited positioning
+
+I used the fixed position to have the id "top" to guide the users back to the top when they scroll down through my site.
+This is useful because instead of a user spending time scrolling back to the top, there's a button to guide them automatically to the top.
+*/
+aside{
+  position: fixed;
+  bottom: 5px;
+  left: 0px;
+  font-size: 1.3em;
+}
+
+/*
+M4LO6 Demonstrate the use of opacity/transparency for images
+
+Added opacity to the figure photo having it appear a little transparent.
+*/
+figure{
+  opacity: 0.80;
+}
+
+
+/* Media styles */
+
+/* 
+M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site)
+
+Made the font size bigger for mobile users to make the site easier to read.
+Another change is readjusting the width of the shiba coat photos so they don't overlap in mobile view.
+*/
+@media screen and (max-width: 480px){
+  html{
+  font-size: 1.35em;
+  }
+  
+  div.col-1-4{
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 769px){
+  div.col-1-4{
+    width: 25%;
+  }
+}
+
+/* Pulldown Menu */
+
+/* 
+M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas) (CSS, note where the menu is on your site and how it behaves)
+
+I made a pull-down menu for my sources since there's a lot of sources cited for my site.
+When a user hovers their cursor over the "Sources(Hover to see sources!)" it'll display the list of sources used.
+*/
+ul.submenu{
+  display: none;
+  
+}
+a.submenuTitle:hover+ul.submenu, ul.submenu:hover{
+  display: block;
+}
+
+/* Table Styles */
+/* 
+M6LO7 Demonstrate how to format a table with CSS
+
+I added a gradient to the background of the table for style and added a border around the table.
+*/
+table{
+  background: linear-gradient(to bottom, rgba(243, 173, 94, 0.699), rgba(240, 186, 116, 0.295));
+  border: 5px outset rgb(119, 93, 48);
+  font: 0.9em;
+  width: 100%;
+}
+
+#tableTitle{
+  font-size: 2em;
+}
+
+.tableHead{
+  font-size: 1.25em;
+}
+
+.info{
+  overflow: auto;
+  font-size: 1.2em;
+  font-family: 'Times New Roman', Times, serif;
+}
