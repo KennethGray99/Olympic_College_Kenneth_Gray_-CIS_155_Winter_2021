@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Author: Kenneth Gray
+Date: 03/04/21
+Subject: CIS155 Project v4
+-->
+<head>
+<!--
+M1LO6 Demonstrate the use of basic HTML tags to create a simple Web page (HTML, this item should be specified once, describing how the file it is in meets this outcome)
+
+The page I've constructed consists of the basic HTML code needed to create a web page, such as the <html>, <head>, <body>, <article>.
+-->
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Dog, shiba, shiba inu, health" />
+    <!--
+    M1LO8 Demonstrate the use of external style sheets (HTML, note the external style sheet must exist and contain CSS)
+
+    A CSS external style sheet to help decorate my site.
+   
+    M3LO1 Demonstrate the use of a CSS reset style sheet
+
+    Created a reset style sheet and linked it to the html pages.
+    -->
+    <link href="resetstyles.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Home Page</title>
+    <!--
+    M2LO4 Demonstrate external, embedded, and inline styles (HTML, this item should be specified 2 times,
+    once each for embedded and inline styles; note external was taken care of with M1LO8;
+    see 2-3b Embedded Style Sheets, and 2-3c Inline Styles)
+        
+    Embedded Style changing the font of the lists font.
+    -->
+    <style>
+        article > nav > ul > li{
+            font-family: Cambria;
+        }
+    </style>
+</head> 
+
+<body>
+<header id="top">
+    <!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external
+    (HTML, this item should be specified 3 times, once on each type of link)
+    
+    An image link that will direct you back to the home page.
+    -->
+    <a href="index.html#home"><img src="groupOfShibas.jpg" alt="" /></a>
+    <p style="padding-left: 35px;" id="paragraphColor"><strong>Click the group of Shibas to go back to the home page.</strong></p>
+    <nav>
+        <ul>
+            <!--
+            M1LO12 Create navigation using unordered lists (HTML)
+            
+            An unordered lists to let users navigate through my site.
+
+            M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external
+            (HTML, this item should be specified 3 times, once on each type of link)
+
+            Site navigation links, the home page, history page, health page, and about page.
+            -->
+            
+            <li class= "navLinks"><a href="index.html">Home</a></li>
+            <li class= "navLinks"><a href="history.html">History</a></li>
+            <li class= "navLinks"><a href="health.html">Health</a></li>
+            <li class= "navLinks"><a href="about.html">About</a></li>
+            <li class= "navLinks"><a href="feedBack.html">Feedback</a></li>
+        </ul>
+        <br/><br/>
+    </nav>
+</header>
+
+<h1 class="headerColor">Welcome to the Shiba Inu Home Page!</h1>
+
+    <p>This is my home page for the Shiba Inu website.<br/><br/>
+        
+        The website will have links to the history and 
+        health info of the Shiba Inu along with an 
+        <a href="about.html#about">about</a> page containing information about any changes 
+        to the site.</p><br/>
+
+
+<article id="colorCoats">
+    <h2>Shiba Inu Coat Colors</h2>
+    <p>There are four different coat colors for the Shiba Inu:</p>
+    <!--
+    M2LO4 Demonstrate external, embedded, and inline styles (HTML, this item should be specified 2 times,
+    once each for embedded and inline styles; note external was taken care of with M1LO8;
+    see 2-3b Embedded Style Sheets, and 2-3c Inline Styles)
+        
+    Inline Style moving the 4 photos of the shibas up so it doesn't touch the bottom of the page.
+    -->
+    <div class="row">
+        <div class="col-1-4">
+            <img class = "coatPhoto" style="margin-bottom: 10px;" src="redCoatShiba.png" alt="Red coat Shiba Inu" />
+                <p><strong>Red Coat</strong></p> <cite> </cite>
+        </div>
+        <div class="col-1-4">
+            <img class = "coatPhoto" style="margin-bottom: 10px;" src="blackAndTanCoatShiba.png" alt="Black and Tan coat Shiba Inu" />
+                <p><strong>Black and Tan Coat</strong></p>
+        </div>
+        <div class="col-1-4">
+            <img class = "coatPhoto" style="margin-bottom: 10px;" src="sesameCoatShiba.png" alt="Sesame coat Shiba Inu" />
+                <p><strong>Seasame Coat</strong></p>
+        </div>
+        <div class="col-1-4">
+            <img class = "coatPhoto" style="margin-bottom: 10px;" src="creamCoatShiba.png" alt="Cream coat Shiba Inu" />
+                <p><strong>Cream Coat</strong></p>
+        </div>
+        
+    </div>
+</article>
+
+<!--
+    M4LO1 Demonstrate the use of figure boxes
+
+    Added a figure along with a figure caption of the popular tourist attraction spot to see the three Shiba Inus peek through a hole.
+-->
+<h2>Shiba Tourist Attraction</h2>
+<figure>
+    <img  src="shibaHole.png" alt="Famous Shiba Hole" />
+    <figcaption>
+        Photo of a small tourist attraction spot of three Shiba Inus. 
+    </figcaption>
+</figure>
+<br/>
+<aside>
+    <a href="#top"> Click here to go to the top</a>
+</aside>
+
+<footer>
+    <address>
+        <!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external
+    (HTML, this item should be specified 3 times, once on each type of link)
+
+        Provided an email as an external hyperlink.
+        -->
+       Email: <a href="fakeEmail@gmail.com"> fakeEmail@gmail.com</a>
+    </address>
+    Kenneth Gray - CIS 155 - Winter 2021
+</footer>
+</body>
+</html>

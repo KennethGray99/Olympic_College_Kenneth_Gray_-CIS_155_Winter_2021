@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Author: Kenneth Gray
+Date: 03/04/21
+Subject: CIS155 Project v4
+-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Dog, shiba, shiba inu, health" />
+    <link href="resetstyles.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>About Page</title>
+</head>  
+
+<body>
+    <header id="top">
+       <a href="index.html#home"><img src="groupOfShibas.jpg" alt="" /></a>
+       <p style="padding-left: 35px;" id="paragraphColor"><strong>Click the group of Shibas to go back to the home page.</strong></p>
+        <nav>
+            <ul>
+                <li class= "navLinks"><a href="index.html">Home</a></li>
+                <li class= "navLinks"><a href="history.html">History</a></li>
+                <li class= "navLinks"><a href="health.html">Health</a></li>
+                <li class= "navLinks"><a href="about.html">About</a></li>
+                <li class= "navLinks"><a href="feedBack.html">Feedback</a></li>
+            </ul>
+        <br/><br/>
+        </nav>
+    </header>
+
+    <section>
+
+        <!--
+        M7LO8 Demonstrate the use of a selection list in a form
+        M7LO9 Demonstrate the use of a text area in a form
+        M7LO10 Demonstrate the use of a submit button in a form
+
+        Created a selection list of satisfication for user feedback.
+        Created a text area for users to enter text for suggestions on improving the site.
+        Created a submit button to submit the feedback.
+        -->
+     <h1>Feedback Form</h1>
+     <form action="http://www.example.com/feedback" method="POST">
+        <label for="nBox">Your Name</label>
+        <input name="name" id="nBox" type="text" required />
+
+        <label for="mailBox">E-mail</label>
+        <input name="email" id="mailBox" type="email" required />
+
+        <label for="rateList">Satisfactory Rating</label>
+        <select name="rateType" id="rateList">
+          <option value="rate1">1 (Very Bad)</option>
+          <option value="rate2">2 (Bad)</option>
+          <option value="rate3">3 (Neutral)</option>
+          <option value="rate4">4 (Good)</option>
+          <option value="rate5">5 (Very Good) </option>
+          </select>
+
+        <label for="suggBox">Suggestions (Optional)</label>
+        <textarea name="suggestions" id="suggBox" ></textarea>
+
+          <p><input type="submit" value="Submit" /></p>
+     </form>
+   </section>
+
+
+<aside>
+    <a href="#top"> Click here to go to the top</a>
+</aside>
+
+<footer>
+    <address>
+       Email: <a href="fakeEmail@gmail.com"> fakeEmail@gmail.com</a>
+    </address>
+    Kenneth Gray - CIS 155 - Winter 2021
+</footer>
+</body>
+</html>
